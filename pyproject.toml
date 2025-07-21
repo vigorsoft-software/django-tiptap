@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-tiptap"
+version = "0.1.0"
+description = "Django integration for the Tiptap editor"
+authors = [{name="OpenAI", email="contact@example.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Django",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "Django>=5.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/example/django-tiptap"
+"Bug Tracker" = "https://github.com/example/django-tiptap/issues"
+
+[tool.setuptools]
+packages = ["django_tiptap", "django_tiptap.templatetags"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"django_tiptap" = ["static/django_tiptap/js/*.js", "templates/django_tiptap/*.html"]
