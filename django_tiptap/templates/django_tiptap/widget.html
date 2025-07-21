@@ -1,0 +1,1 @@
+<textarea name="{{ widget.name }}"{% if widget.attrs %}{% include "django/forms/widgets/attrs.html" %}{% endif %} data-tiptap>{{ widget.value|default_if_none:'' }}</textarea>
